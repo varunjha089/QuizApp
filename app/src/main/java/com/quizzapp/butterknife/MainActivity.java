@@ -17,9 +17,6 @@ import butterknife.BindView;
 public class MainActivity extends AppCompatActivity {
 
 
-    private int score1, score2, score3, score4, score5, totalScore;
-    private boolean checked1, checked2, checked3, checked5;
-    private String anwser4;
     // @BindView(R.id.button51)
     CheckBox mCheckBox1;
     // @BindView(R.id.button52)
@@ -36,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup mRadioGroup2;
     @BindView(R.id.radiogroup3)
     RadioGroup mRadioGroup3;
+    private int score1, score2, score3, score4, score5, totalScore;
+    private boolean checked1, checked2, checked3, checked5;
+    private String anwser4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,15 +158,7 @@ public class MainActivity extends AppCompatActivity {
         }
         }
 
-    public void clickReset(View view) {
-        uncheckRadioGroup(mRadioGroup1);
-        uncheckRadioGroup(mRadioGroup2);
-        uncheckRadioGroup(mRadioGroup3);
-        mEditTextQ4.setText("");
-        uncheckCheckBoxes();
-    }
-
-    private void uncheckRadioGroup(RadioGroup radioGroup) {
+        private void uncheckRadioGroup(RadioGroup radioGroup) {
         radioGroup.clearCheck();
     }
 
