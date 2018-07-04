@@ -218,14 +218,7 @@
             android:onClick="onCheckedQuestion5"
             android:text="@string/option_q_5_3"
             android:textSize="12sp" />
-        <CheckBox
-            android:id="@+id/button54"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:onClick="onCheckedQuestion5"
-            android:text="@string/option_q_5_4"
-            android:textSize="12sp" />
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

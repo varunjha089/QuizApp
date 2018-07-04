@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         mCheckBox1=findViewById(R.id.button51);
         mCheckBox2=findViewById(R.id.button52);
         mCheckBox3=findViewById(R.id.button53);
-        mCheckBox4=findViewById(R.id.button54);
         mEditTextQ4=findViewById(R.id.edit_text_q4);
 
     }
@@ -122,14 +121,14 @@ public class MainActivity extends AppCompatActivity {
         anwser4 = mEditTextQ4.getText().toString();
         if (checked1 && checked2 && checked3 && !anwser4.equals("") && checked5) {
             // count question 4
-            if (anwser4.toLowerCase().equals("java"))
+            if (anwser4.toLowerCase().equals("sebastian tharun"))
                 score4 = 20;
             else
                 score4 = 0;
             // count question 5
             score5 = 0;
             if (mCheckBox1.isChecked()) {
-                score5 += -10;
+                score5 += 10;
             }
             if (mCheckBox2.isChecked()) {
                 score5 += 10;
@@ -137,9 +136,7 @@ public class MainActivity extends AppCompatActivity {
             if (mCheckBox3.isChecked()) {
                 score5 += 10;
             }
-            if (mCheckBox4.isChecked()) {
-                score5 += -10;
-            }
+
             if (score5 < 0) {
                 score5 = 0;
             }
@@ -161,9 +158,7 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
 
         }
-
-
-    }
+        }
 
     public void clickReset(View view) {
         uncheckRadioGroup(mRadioGroup1);
