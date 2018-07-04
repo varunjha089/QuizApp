@@ -5,19 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
 import butterknife.BindView;
 
 //import com.quizapp.android.quizapp.R;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn;
+
 
     private int score1, score2, score3, score4, score5, totalScore;
     private boolean checked1, checked2, checked3, checked5;

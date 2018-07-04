@@ -28,4 +28,11 @@
     <string name="option_q_5_3">United States</string>
     <string name="your_score_is">Your Score is</string>
     <string name="make_sure_answer_questions">Please make sure you answer all the questions</string>
+    <string name="headline">UDACITY GOT TALENT</string>
+    <string name="headline_one">Consistency is the way to success</string>
+    <string name="start_button">Start Now</string>
+    <string name="heading">Welcome to Udacity Quiz Challenge!</string>
+    <string name="submit_button">Submit</string>
+    <string name="reset_button">Reset</string>
+    <string name="hint_answer">Write Your Answer Here</string>
 </resources>
