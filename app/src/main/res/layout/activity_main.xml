@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/backgroundColor"
-    android:padding="15dp">
+    android:padding="@dimen/scroll_padding">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -170,7 +170,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/layout_margin_button"
             android:orientation="vertical">
 
             <Button
@@ -179,8 +179,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="120dp"
                 android:onClick="clickSubmit"
-                android:background="#0c6483"
-                android:padding="15dp"
+                android:background="@color/submit_background"
+                android:padding="@dimen/button_padding"
                 android:text="@string/submit_button"
                 />
         </LinearLayout>

@@ -10,13 +10,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
 import butterknife.BindView;
 
 //import com.quizapp.android.quizapp.R;
-
 public class MainActivity extends AppCompatActivity {
-
-
     // @BindView(R.id.button51)
     CheckBox mCheckBox1;
     // @BindView(R.id.button52)
@@ -41,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mCheckBox1=findViewById(R.id.button51);
-        mCheckBox2=findViewById(R.id.button52);
-        mCheckBox3=findViewById(R.id.button53);
-        mEditTextQ4=findViewById(R.id.edit_text_q4);
+        mCheckBox1 = findViewById(R.id.button51);
+        mCheckBox2 = findViewById(R.id.button52);
+        mCheckBox3 = findViewById(R.id.button53);
+        mEditTextQ4 = findViewById(R.id.edit_text_q4);
 
     }
 
@@ -156,9 +154,9 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
 
         }
-        }
+    }
 
-        private void uncheckRadioGroup(RadioGroup radioGroup) {
+    private void uncheckRadioGroup(RadioGroup radioGroup) {
         radioGroup.clearCheck();
     }
 

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#120101"
+    android:background="@color/background_layout"
     android:orientation="vertical">
 
     <ImageView
@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/headline"
-        android:textColor="#e8f5f4"
-        android:textSize="30sp"
+        android:textColor="@color/text_color_main"
+        android:textSize="@dimen/txtsze"
         android:textStyle="italic" />
 
     <TextView
@@ -25,29 +25,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/margin_top"
         android:text="@string/headline_one"
-        android:textColor="#eaeded"
+        android:textColor="@color/text_color_main"
         android:textSize="@dimen/text_size"
         android:textStyle="italic" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:background="#feffff"/>
+        android:layout_height="@dimen/view_height"
+        android:layout_marginLeft="@dimen/view_left_layout"
+        android:layout_marginRight="@dimen/view_right_layout"
+        android:background="@color/background_view"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/button_margin"
         android:background="@drawable/button"
-        android:paddingBottom="15dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="15dp"
+        android:paddingBottom="@dimen/button_bottom_padding"
+        android:paddingLeft="@dimen/button_left_padding"
+        android:paddingRight="@dimen/button_right_padding"
+        android:paddingTop="@dimen/button_top_padding"
         android:text="@string/start_button"
         android:textSize="@dimen/text_size"/>
 </LinearLayout>
