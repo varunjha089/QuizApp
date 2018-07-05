@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 
-//import com.quizapp.android.quizapp.R;
 public class MainActivity extends AppCompatActivity {
     // @BindView(R.id.button51)
     CheckBox mCheckBox1;
@@ -46,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // This code is for button one.
+
     public void onCheckedQuestion1(View view) {
         checked1 = ((RadioButton) view).isChecked();
         switch (view.getId()) {
@@ -66,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
     }
+
+    // This code is for button two.
 
     public void onCheckedQuestion2(View view) {
         checked2 = ((RadioButton) view).isChecked();
@@ -88,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // This code is for button three.
+
     public void onCheckedQuestion3(View view) {
         checked3 = ((RadioButton) view).isChecked();
         switch (view.getId()) {
@@ -109,19 +114,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // This code is for button five.
+
     public void onCheckedQuestion5(View view) {
         checked5 = mCheckBox1.isChecked() || mCheckBox2.isChecked() || mCheckBox3.isChecked() || mCheckBox4.isChecked();
     }
 
+    // This code is for button Submit.
+
     public void clickSubmit(View view) {
         anwser4 = mEditTextQ4.getText().toString();
         if (checked1 && checked2 && checked3 && !anwser4.equals("") && checked5) {
-            // count question 4
+
+            // This code is for count question 4.
+
             if (anwser4.toLowerCase().equals("sebastian tharun"))
                 score4 = 20;
             else
                 score4 = 0;
-            // count question 5
+            //This code is for count question 5.
             score5 = 0;
             if (mCheckBox1.isChecked()) {
                 score5 += 10;
@@ -138,8 +149,13 @@ public class MainActivity extends AppCompatActivity {
             }
             totalScore = score1 + score2 + score3 + score4 + score5;
             String anwser = getString(R.string.your_score_is) + "  " + totalScore;
+
+            // This code is to toast the score value.
+
             Toast.makeText(getApplicationContext(), anwser, Toast.LENGTH_LONG).show();
-            //this will share your score
+
+            // This code will share the score
+
             Intent shareIntent = new Intent();
             shareIntent.setAction(Intent.ACTION_SEND);
             shareIntent.putExtra(Intent.EXTRA_TEXT, "my score is : " + totalScore);
@@ -152,19 +168,6 @@ public class MainActivity extends AppCompatActivity {
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-
         }
-    }
-
-    private void uncheckRadioGroup(RadioGroup radioGroup) {
-        radioGroup.clearCheck();
-    }
-
-    private void uncheckCheckBoxes() {
-        mCheckBox1.setChecked(false);
-        mCheckBox2.setChecked(false);
-        mCheckBox3.setChecked(false);
-        mCheckBox4.setChecked(false);
-        checked5 = false;
     }
 }

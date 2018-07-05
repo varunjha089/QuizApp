@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/background_layout"
     android:orientation="vertical">
+    <!-- This code is for the Image View -->
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/udacity" />
+     <ImageView
+         android:id="@+id/image"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:src="@drawable/udacity" />
 
+    <!-- This code is for the main heading quote of Text View -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +21,8 @@
         android:textColor="@color/text_color_main"
         android:textSize="@dimen/txtsze"
         android:textStyle="italic" />
+
+    <!-- This code is for the sub heading quote of Text View -->
 
     <TextView
         android:id="@+id/quote"
@@ -30,12 +34,17 @@
         android:textColor="@color/text_color_main"
         android:textSize="@dimen/text_size"
         android:textStyle="italic" />
+
+    <!-- This code is for View -->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/view_height"
         android:layout_marginLeft="@dimen/view_left_layout"
         android:layout_marginRight="@dimen/view_right_layout"
         android:background="@color/background_view"/>
+
+    <!-- This code is for Start Button -->
 
     <Button
         android:id="@+id/button"
@@ -50,4 +59,5 @@
         android:paddingTop="@dimen/button_top_padding"
         android:text="@string/start_button"
         android:textSize="@dimen/text_size"/>
+
 </LinearLayout>

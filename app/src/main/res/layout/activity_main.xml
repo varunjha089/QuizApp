@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This code is for scroll view-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/backgroundColor"
     android:padding="@dimen/scroll_padding">
+
+    <!--This code is for all quiz questions included inside the Linear Layout-->
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,6 +15,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context="com.example.android.quizapp.MainActivity">
+
+        <!-- This code is for main heading of the text view -->
 
         <TextView
             android:layout_width="match_parent"
@@ -25,14 +30,18 @@
             android:textSize="@dimen/text_size_for_heading"
             android:textStyle="bold" />
 
+        <!-- This code is for tittle of question number one-->
         <TextView
             style="@style/questionNumber"
             android:text="@string/title_q_1" />
 
+        <!-- This code is for content of question number one-->
 
         <TextView
             style="@style/questionName"
             android:text="@string/content_q_1" />
+
+        <!-- This code is for radio group-->
 
         <RadioGroup
             android:id="@+id/radiogroup1"
@@ -57,13 +66,19 @@
                 android:text="@string/option_q_1_3" />
         </RadioGroup>
 
+        <!-- This code is for tittle of question number two-->
+
         <TextView
             style="@style/questionNumber"
             android:text="@string/title_q_2" />
 
+        <!-- This code is for content of question number two-->
+
         <TextView
             style="@style/questionName"
             android:text="@string/content_q_2" />
+
+        <!-- This code is for radio group-->
 
         <RadioGroup
             android:id="@+id/radiogroup2"
@@ -88,13 +103,19 @@
                 android:text="@string/option_q_2_3" />
         </RadioGroup>
 
+        <!-- This code is for tittle of question number three-->
+
         <TextView
             style="@style/questionNumber"
             android:text="@string/title_q_3" />
 
+        <!-- This code is for content of question number three-->
+
         <TextView
             style="@style/questionName"
             android:text="@string/content_q_3" />
+
+        <!-- This code is for radio group-->
 
         <RadioGroup
             android:id="@+id/radiogroup3"
@@ -119,13 +140,19 @@
                 android:text="@string/option_q_3_3" />
         </RadioGroup>
 
+
+        <!-- This code is for tittle of question number four-->
         <TextView
             style="@style/questionNumber"
             android:text="@string/title_q_4" />
 
+        <!-- This code is for content of question number one-->
+
         <TextView
             style="@style/questionName"
             android:text="@string/content_q_4" />
+
+        <!-- This code is for Edit Text of question number four-->
 
         <EditText
             android:id="@+id/edit_text_q4"
@@ -137,16 +164,23 @@
             android:textColorHint="@color/text_color"
             android:textColor="@color/text_color"
             android:inputType="textCapWords" />
+        <!-- This code is for tittle of question number five-->
 
         <TextView
             style="@style/questionNumber"
             android:text="@string/title_q_5" />
 
+        <!-- This code is for content of question number five-->
+
         <TextView
             style="@style/questionName"
             android:text="@string/content_q_5" />
 
-        <LinearLayout style="@style/RadiogroupAnswer">
+        <!-- This code is for the cheackbox in the questions-->
+
+        <LinearLayout
+
+            style="@style/RadiogroupAnswer">
 
             <CheckBox
                 android:id="@+id/button51"
@@ -173,6 +207,8 @@
             android:layout_marginTop="@dimen/layout_margin_button"
             android:orientation="vertical">
 
+            <!-- This code is for submit button-->
+
             <Button
                 android:id="@+id/submit"
                 android:layout_width="wrap_content"
@@ -185,4 +221,5 @@
                 />
         </LinearLayout>
     </LinearLayout>
+
 </ScrollView>
