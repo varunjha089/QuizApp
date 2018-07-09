@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         totalScore =0;
     }
 
-    
+
     public void onCheckedQuestion1(View view) {
         checked1 = ((RadioButton) view).isChecked();
         switch (view.getId()) {
