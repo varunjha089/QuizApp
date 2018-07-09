@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     CheckBox mCheckBox2;
     // @BindView(R.id.button53)
     CheckBox mCheckBox3;
-    //@BindView(R.id.button54)
-    CheckBox mCheckBox4;
     //@BindView(R.id.edit_text_q4)
     EditText mEditTextQ4;
+
+
     @BindView(R.id.radiogroup1)
     RadioGroup mRadioGroup1;
     @BindView(R.id.radiogroup2)
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mCheckBox2 = findViewById(R.id.button52);
         mCheckBox3 = findViewById(R.id.button53);
         mEditTextQ4 = findViewById(R.id.edit_text_q4);
-
+        totalScore =0;
     }
 
     // This code is for button one.
@@ -94,30 +94,65 @@ public class MainActivity extends AppCompatActivity {
     // This code is for button three.
 
     public void onCheckedQuestion3(View view) {
-        checked3 = ((RadioButton) view).isChecked();
-        switch (view.getId()) {
-            case R.id.button31:
-                if (checked3) {
-                    score3 = 0;
-                    break;
-                }
-            case R.id.button32:
-                if (checked3) {
-                    score3 = 0;
-                    break;
-                }
-            case R.id.button33:
-                if (checked3) {
-                    score3 = 20;
-                    break;
-                }
+
+        if (checked3 == true){
+            score3 =20;
+        }
+        else {
+            score3 = 0;
         }
     }
+       // checked3 = ((RadioButton) view).isChecked();
+//        switch (view.getId()) {
+//            case R.id.button31:
+//                if (checked3) {
+//                    score3 = 0;
+//                    break;
+//                }
+//            case R.id.button32:
+//                if (checked3) {
+//                    score3 = 0;
+//                    break;
+//                }
+//            case R.id.button33:
+//                if (checked3) {
+//                    score3 = 20;
+//                    break;
+//                }
+//        }
+//    }
 
     // This code is for button five.
 
     public void onCheckedQuestion5(View view) {
-        checked5 = mCheckBox1.isChecked() || mCheckBox2.isChecked() || mCheckBox3.isChecked() || mCheckBox4.isChecked();
+
+
+        // this is the correct option.
+        if (mCheckBox1.isChecked() && mCheckBox2.isChecked() && mCheckBox3.isChecked()) {
+            score5 = 30;
+
+        }
+        if (mCheckBox1.isChecked() && !mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5 = -10;
+        }
+        if (mCheckBox1.isChecked() && mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5 = 10;
+        }
+        if (!mCheckBox1.isChecked() && !mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5=0;
+        }
+        if (mCheckBox1.isChecked() && mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5=10;
+        }
+        if (mCheckBox1.isChecked() && !mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5= -10;
+        }
+        if (!mCheckBox1.isChecked() && mCheckBox2.isChecked() && !mCheckBox3.isChecked()) {
+            score5=-10;
+        }
+        if (mCheckBox1.isChecked() && !mCheckBox2.isChecked() && mCheckBox3.isChecked()) {
+            score5= 10;
+        }
     }
 
     // This code is for button Submit.
@@ -128,26 +163,26 @@ public class MainActivity extends AppCompatActivity {
 
             // This code is for count question 4.
 
-            if (anwser4.toLowerCase().equals("sebastian tharun"))
+            if (anwser4.toLowerCase().equals("sebastian thrun"))
                 score4 = 20;
             else
                 score4 = 0;
             //This code is for count question 5.
-            score5 = 0;
-            if (mCheckBox1.isChecked()) {
-                score5 += 10;
-            }
-            if (mCheckBox2.isChecked()) {
-                score5 += 10;
-            }
-            if (mCheckBox3.isChecked()) {
-                score5 += 10;
-            }
-
-            if (score5 < 0) {
-                score5 = 0;
-            }
-            totalScore = score1 + score2 + score3 + score4 + score5;
+//            score5 = 0;
+//            if (mCheckBox1.isChecked()) {
+//                score5 += 10;
+//            }
+//            if (mCheckBox2.isChecked()) {
+//                score5 += 10;
+//            }
+//            if (mCheckBox3.isChecked()) {
+//                score5 += 10;
+//            }
+//
+//            if (score5 < 0) {
+//                score5 = 0;
+//            }
+              totalScore = score1 + score2 + score3 + score4 + score5;
             String anwser = getString(R.string.your_score_is) + "  " + totalScore;
 
             // This code is to toast the score value.
