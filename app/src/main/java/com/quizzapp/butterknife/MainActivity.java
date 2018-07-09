@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     //@BindView(R.id.edit_text_q4)
     EditText mEditTextQ4;
 
-
     @BindView(R.id.radiogroup1)
     RadioGroup mRadioGroup1;
     @BindView(R.id.radiogroup2)
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.radiogroup3)
     RadioGroup mRadioGroup3;
     private int score1, score2, score3, score4, score5, totalScore;
-    private boolean checked1, checked2, checked3, checked5;
-    private String anwser4;
+    private boolean checked1, checked2, checked3;
+    private String answer4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         totalScore =0;
     }
 
-    // This code is for button one.
-
+    
     public void onCheckedQuestion1(View view) {
         checked1 = ((RadioButton) view).isChecked();
         switch (view.getId()) {
@@ -68,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // This code is for button two.
 
     public void onCheckedQuestion2(View view) {
         checked2 = ((RadioButton) view).isChecked();
@@ -91,36 +88,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // This code is for button three.
 
     public void onCheckedQuestion3(View view) {
 
-        if (checked3 == true){
-            score3 =20;
-        }
-        else {
-            score3 = 0;
-        }
-    }
-       // checked3 = ((RadioButton) view).isChecked();
-//        switch (view.getId()) {
-//            case R.id.button31:
-//                if (checked3) {
-//                    score3 = 0;
-//                    break;
-//                }
-//            case R.id.button32:
-//                if (checked3) {
-//                    score3 = 0;
-//                    break;
-//                }
-//            case R.id.button33:
-//                if (checked3) {
-//                    score3 = 20;
-//                    break;
-//                }
-//        }
-//    }
+
+       checked3 = ((RadioButton) view).isChecked();
+      switch (view.getId()) {
+            case R.id.button31:
+                if (checked3) {
+                    score3 = 0;
+                    break;
+            }
+          case R.id.button32:
+              if (checked3) {
+                   score3 = 0;
+                   break;
+              }
+          case R.id.button33:
+              if (checked3) {
+                  score3 = 20;
+                  break;
+              }
+       }
+   }
 
     // This code is for button five.
 
@@ -158,36 +148,21 @@ public class MainActivity extends AppCompatActivity {
     // This code is for button Submit.
 
     public void clickSubmit(View view) {
-        anwser4 = mEditTextQ4.getText().toString();
-        if (checked1 && checked2 && checked3 && !anwser4.equals("") && checked5) {
+        answer4 = mEditTextQ4.getText().toString();
 
-            // This code is for count question 4.
+        if (checked1 && checked2 && checked3 && !answer4.equals(" ") ){
 
-            if (anwser4.toLowerCase().equals("sebastian thrun"))
+            if (answer4.toLowerCase().equals("sebastian thrun"))
                 score4 = 20;
             else
                 score4 = 0;
-            //This code is for count question 5.
-//            score5 = 0;
-//            if (mCheckBox1.isChecked()) {
-//                score5 += 10;
-//            }
-//            if (mCheckBox2.isChecked()) {
-//                score5 += 10;
-//            }
-//            if (mCheckBox3.isChecked()) {
-//                score5 += 10;
-//            }
-//
-//            if (score5 < 0) {
-//                score5 = 0;
-//            }
+
               totalScore = score1 + score2 + score3 + score4 + score5;
-            String anwser = getString(R.string.your_score_is) + "  " + totalScore;
+            String answer = getString(R.string.your_score_is) + "  " + totalScore;
 
             // This code is to toast the score value.
 
-            Toast.makeText(getApplicationContext(), anwser, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), answer, Toast.LENGTH_LONG).show();
 
             // This code will share the score
 
